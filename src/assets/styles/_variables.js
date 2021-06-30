@@ -2,7 +2,8 @@ const colors = {
   black: '#000000',
   white: '#ffffff',
   gray: '#C0C4CC',
-  navy: '#E1E3E6',
+  mediumGray: '#888888',
+  green: '#4BB543',
   pink: '#ffa5be',
 };
 

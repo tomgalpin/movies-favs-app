@@ -11,9 +11,16 @@ const StyledSearchTitle = styled.h3`
   margin-bottom: 23px;
 `;
 
-const SearchTitle = ({ title }) => {
+const SearchTitle = ({ searchParams }) => {
+  const isValidSearchParam = searchParams.length > 0;
+  const searchTitle = isValidSearchParam
+    ? `Search:  ${searchParams}`
+    : 'The Fast and the Furious Movies';
+
   return (
-    <StyledSearchTitle data-testid="search-title">{title}</StyledSearchTitle>
+    <StyledSearchTitle data-testid="search-title">
+      {searchTitle}
+    </StyledSearchTitle>
   );
 };
 

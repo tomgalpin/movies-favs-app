@@ -1,3 +1,4 @@
+import { useSelector } from 'react-redux';
 import SearchBar from 'components/search-bar/search-bar';
 import {
   StyledHeader,
@@ -5,6 +6,8 @@ import {
 } from 'components/header/styled-header';
 
 const Header = (props) => {
+  const playlistCount = useSelector((state) => state.playlist.count.value);
+
   return (
     <StyledHeader data-testid="header">
       <h1>
@@ -13,7 +16,9 @@ const Header = (props) => {
           <span> Fastronauts</span>
         </a>
       </h1>
-      <StyledRouterLink to="/playlist">Your Playlist</StyledRouterLink>
+      <StyledRouterLink to="/playlist" data-testid="route-playlist">
+        Your Playlist: ({playlistCount})
+      </StyledRouterLink>
       <SearchBar handleSubmit={props.handleSubmit} />
     </StyledHeader>
   );

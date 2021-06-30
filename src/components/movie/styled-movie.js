@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import { colors } from 'assets/styles/_variables';
 
+const iconSize = '24px';
+
 const StyledMovie = styled.div`
   position: relative;
   background: ${colors.black};
@@ -31,21 +33,21 @@ const StyledAddBtn = styled.button`
   position: absolute;
   top: 15px;
   left: 15px;
+  z-index: 100;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 34px;
-  height: 34px;
+  height: ${iconSize};
+  width: ${iconSize};
   border-radius: 50%;
-  background-color: ${colors.white};
-  border: 2px solid ${colors.black};
-  cursor: pointer;
-  z-index: 100;
+  padding: 0;
+  margin: 0;
+  border: none;
+  cursor: ${(props) => (props.hasMovieInPlaylist ? 'default' : 'pointer')};
 
-  span {
-    font-weight: bold;
-    font-size: 20px;
-    color: ${colors.black};
+  svg {
+    height: ${iconSize};
+    width: ${iconSize};
   }
 `;
 

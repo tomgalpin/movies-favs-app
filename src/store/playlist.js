@@ -2,7 +2,10 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   playlist: {
-    value: [],
+    value: {},
+  },
+  count: {
+    value: 0,
   },
 };
 
@@ -12,8 +15,13 @@ const playlist = createSlice({
 
   reducers: {
     addToPlaylist: (state, { payload }) => {
-      console.log(15, state);
-      console.log(16, payload);
+      state.playlist.value[payload.id] = {
+        title: payload.title,
+        poster: payload.poster,
+        id: payload.id,
+      };
+
+      state.count.value = state.count.value + 1;
     },
   },
 });

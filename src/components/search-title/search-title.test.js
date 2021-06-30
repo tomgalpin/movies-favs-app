@@ -5,7 +5,7 @@ describe('<SearchTitle />', () => {
   let searchTitle;
 
   const defaultProps = {
-    title: 'Mock Title',
+    searchParams: 'Mock Search',
   };
 
   beforeEach(() => {
@@ -17,6 +17,6 @@ describe('<SearchTitle />', () => {
 
   it('Renders <SearchTitle /> component correctly', () => {
     expect(searchTitle).toBeInTheDocument();
-    expect(searchTitle).toHaveTextContent('Mock Title');
+    expect(searchTitle).toHaveTextContent('Mock Search');
   });
 });

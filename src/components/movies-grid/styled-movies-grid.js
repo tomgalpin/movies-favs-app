@@ -5,6 +5,7 @@ const StyledMoviesGrid = styled.section`
   display: grid;
   grid-gap: 26px;
   grid-template-columns: 1fr;
+  margin-bottom: 20px;
 
   @media screen and (min-width: ${screenWidths.tablet}) {
     grid-template-columns: repeat(2, 1fr);
