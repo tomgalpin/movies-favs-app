@@ -1,3 +1,98 @@
+# Tom's OMDB Movie Favs App:
+A React app using OMDB Api for search and infinite scroll on the UI.
+
+## Deploy
+- Live @: http://tomgalpin.github.io/movie-favs-app
+  - From: https://github.com/gitname/react-gh-pages
+
+## Requirements:
+  1. Search for movies
+  2. Render the results.  Add in infinite scroll for additional Api calls/pagination.
+  3. Add movies to a playlist.  
+  4. View/confirm movies in playlist.
+  5.  Use OMDB Api: https://www.omdbapi.com.  Not going to worry about putting API Key in an .env var.
+
+## Notes:
+  1. I ran out of energy to fully write tests for `pages/search`.  Same for some of the other components.
+  2. Same to address all potential use cases within the search functionality.
+  3. Improvements to be made:  
+    - Refactor `pages/search`.
+    - Full suite of tests for `pages/search` (and each component)
+    - Address all edge cases for search functionality.
+    - Move "playlist" storage from global store to a DB.
+    - Click on a movie card to show full movie details.
+    - Remove/delete movies from the playlist.
+    - Reorder playlist and add additional flags to each item in the playlist, e.g. "has seen," a "personal rating," etc..
+    - Improve designs and UI.
+    - Caching results to avoid additional api calls that were already made.
+    - Error handling of search.
+
+## Test Coverage:
+---------------------|---------|----------|---------|---------|-------------------
+File | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s
+---------------------|---------|----------|---------|---------|-------------------
+All files | 87.5 | 60 | 81.82 | 86.84 |
+assets/styles | 0 | 100 | 100 | 0 |
+globals.js | 0 | 100 | 100 | 0 | 4
+components/header | 100 | 100 | 100 | 100 |
+styled-header.js | 100 | 100 | 100 | 100 |
+components/movie | 86.96 | 62.5 | 75 | 86.36 |
+movie.js | 81.25 | 75 | 66.67 | 80 | 19,24,50
+styled-movie.js | 100 | 50 | 100 | 100 | 46-63
+pages/app | 100 | 100 | 100 | 100 |
+styled-app.js | 100 | 100 | 100 | 100 |
+pages/playlist | 92.31 | 50 | 100 | 91.67 |
+playlist.js | 90 | 50 | 100 | 88.89 | 21
+styled-playlist.js | 100 | 100 | 100 | 100 |
+---------------------|---------|----------|---------|---------|-------------------
+
+
+## Structure
+    .
+    ├── /public
+    │     └── favicon.ico
+    │     └── index.html
+    │     └── manifest.json
+    │     └── robots.txt
+    ├── /src
+    │     ├──/assets
+    │     │     ├── /images
+    │     │     │      └── image-not-found.png
+    │     │     └── /styles
+    │     │           ├── _variables.js
+    │     │           ├── _globals.js
+    │     │           └── reset.js
+    │     ├── /components
+    │     │     ├── /header
+    │     │     │      ├── header.js
+    │     │     │      ├── header.test.js
+    │     │     │      └── styled-header.js
+    │     │     ├── /movie
+    │     │     ├── /movies-grid
+    │     │     ├── /search-bar
+    │     │     └── /search-title
+    │     ├── /pages
+    │     │     ├── /app
+    │     │     │      ├── app.js
+    │     │     │      ├── app.test.js
+    │     │     │      └── styled-app.js
+    │     │     ├── /playlist
+    │     │     └── /search
+    │     ├── /store
+    │     │     ├── index.js
+    │     │     └── playlist.js
+    │     ├── /test
+    │     │     ├── _mockStore_.js
+    │     │     └── test-utils.js
+    │     ├── index.js
+    │     └── setUpTest.js
+    ├── package.json
+    └── README.md
+
+---
+---
+---
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -6,6 +6,7 @@ const StyledHeader = styled.header`
   padding-bottom: 20px;
   border-bottom: 1px solid ${colors['gray']};
   margin-bottom: 37px;
+  background-color: ${colors.white};
 
   @media screen and (min-width: ${screenWidths.tablet}) {
     display: flex;

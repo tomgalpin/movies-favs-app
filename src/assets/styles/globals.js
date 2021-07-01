@@ -5,7 +5,7 @@ const GlobalStyle = createGlobalStyle`
   ${reset}
   body {
     font-family: 'Inter', sans-serif;
-    padding: 20px;
+    padding: 20px 20px 0 20px;
     position: relative;
 
     &.no-scroll {

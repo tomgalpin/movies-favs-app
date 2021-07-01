@@ -1,6 +1,10 @@
 import { useSelector } from 'react-redux';
 import MoviesGrid from 'components/movies-grid/movies-grid';
 import {
+  StyledPagePlaylist,
+  StyledFooter,
+} from 'pages/playlist/styled-playlist';
+import {
   StyledHeader,
   StyledRouterLink,
 } from 'components/header/styled-header';
@@ -19,13 +23,16 @@ const PagePlaylist = () => {
   };
 
   return (
-    <div data-testid="page-playlist">
+    <StyledPagePlaylist data-testid="page-playlist">
       <StyledHeader>
         <StyledRouterLink to="/">Home</StyledRouterLink>
         <h1>Your Playlist</h1>
       </StyledHeader>
       <main>{renderGrid()}</main>
-    </div>
+      <StyledFooter>
+        <p>My favorite color is green.</p>
+      </StyledFooter>
+    </StyledPagePlaylist>
   );
 };
 

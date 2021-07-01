@@ -60,7 +60,7 @@ const StyledTitle = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  background: ${colors.black};
+  background: ${(test) => (test ? colors.green : colors.black)};
   background: linear-gradient(
     0deg,
     rgba(0, 0, 0, 0.8085609243697479) 22%,

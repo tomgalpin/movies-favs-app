@@ -7,11 +7,11 @@ import {
   StyledAddBtn,
   StyledTitle,
 } from 'components/movie/styled-movie';
+import ImageNotFound from 'assets/images/image-not-found.png';
 import { colors } from 'assets/styles/_variables';
 
 const Movie = (props) => {
   const dispatch = useDispatch();
-  const hasPoster = props.poster !== 'N/A';
   const playlist = useSelector((state) => state.playlist.playlist.value);
   const hasMovieInPlaylist = !!playlist[props.id];
 
@@ -44,7 +44,11 @@ const Movie = (props) => {
     <StyledMovie data-testid="movie">
       {renderAddBtn()}
       <StyledPoster>
-        {hasPoster && <img src={props.poster} alt={props.title} />}
+        <img
+          src={props.poster}
+          alt={props.title}
+          onError={(event) => (event.target.src = ImageNotFound)}
+        />
       </StyledPoster>
       <StyledTitle>
         <p>{props.title}</p>
