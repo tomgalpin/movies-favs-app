@@ -16,6 +16,7 @@ A React app using OMDB Api for search and infinite scroll on the UI.
   1. I ran out of energy to fully write tests for `pages/search`.  Same for some of the other components.
   2. Same to address all potential use cases within the search functionality.
   3. Improvements to be made:  
+  
     - Refactor `pages/search`.
     - Full suite of tests for `pages/search` (and each component)
     - Address all edge cases for search functionality.
