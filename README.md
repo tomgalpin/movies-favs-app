@@ -2,7 +2,7 @@
 A React app using OMDB Api for search and infinite scroll on the UI.
 
 ## Deploy
-- Live @: http://tomgalpin.github.io/movie-favs-app
+- Live @: https://tomgalpin.github.io/movies-favs-app/
   - From: https://github.com/gitname/react-gh-pages
 
 ## Requirements:
